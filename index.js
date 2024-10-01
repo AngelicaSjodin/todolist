@@ -7,30 +7,18 @@ function addList(){
     if(inputField.value !== ""){
         let li = document.createElement("li");
         li.innerHTML = inputField.value;
-        listField.appendChild(li); //appendchild
+        listField.appendChild(li); 
 
         let span = document.createElement("span");
-        span.innerHTML = "Delete";
+        span.innerHTML = "check";
         li.appendChild(span);
     }
     inputField.value = "";
-    Save();
 }
 
 listField.addEventListener("click", function(e){
-    if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked");
-        Save();
-    }
-    else if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove();
+    if(e.target.tagName === "SPAN"){
+        e.target.parentElement.style.textDecoration = "line-through";
     }
 },false);
 
-function Save(){
-    localStorage.setItem("data", listField.innerHTML);
-}
-function show(){
-    listContainer.innerHTML = localStorage.getItem("data");
-}
-show();
