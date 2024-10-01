@@ -12,3 +12,52 @@
 .flexColumn{
     flex-direction: column;
 }
+
+ul li span{
+    position: absolute;
+    text-align: center;
+    padding-right: 5px;
+
+    background-color: red;
+    color: white;
+}
+
+ul li span:hover{
+    background-color: rgb(143, 0, 0);
+    color: white;
+}
+
+.title{
+    padding-top: 2em;
+    text-align: center;
+}
+
+.container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 5em;
+}
+
+.addButton{
+    border-radius: 50%;
+    border-width: 0.05em;
+    width: 1.5em;
+    height: 1.5em;
+    
+}
+
+.to-do{
+    
+}
+
+ul li{
+    padding-top: 1em;
+}
+
+input{
+    border-style: none;
+    border-bottom: 0.05em solid rgb(22, 22, 22);
+}
