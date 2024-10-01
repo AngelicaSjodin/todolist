@@ -13,19 +13,7 @@
     flex-direction: column;
 }
 
-ul li span{
-    position: absolute;
-    text-align: center;
-    padding-right: 5px;
 
-    background-color: red;
-    color: white;
-}
-
-ul li span:hover{
-    background-color: rgb(143, 0, 0);
-    color: white;
-}
 
 .title{
     padding-top: 2em;
@@ -36,7 +24,7 @@ ul li span:hover{
     justify-content: center;
     display: flex;
     align-items: center;
-    text-align: center;
+    
 
     padding-top: 5em;
 }
@@ -55,6 +43,19 @@ ul li span:hover{
 
 ul li{
     padding-top: 1em;
+}
+
+ul li span{
+    position: absolute;
+    text-align: center;
+    
+    background-color: red;
+    color: white;
+}
+
+ul li span:hover{
+    background-color: rgb(143, 0, 0);
+    color: white;
 }
 
 input{
