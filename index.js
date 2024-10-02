@@ -24,7 +24,7 @@ function addList(){
         listField.appendChild(li); 
 
         let span = document.createElement("span");
-        span.innerHTML = "Check";
+        span.innerHTML = "&#128280;";
         li.appendChild(span);
 
         //let p = document.createElement("p");
