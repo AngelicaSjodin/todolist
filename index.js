@@ -10,8 +10,13 @@ function addList(){
         listField.appendChild(li); 
 
         let span = document.createElement("span");
-        span.innerHTML = "check";
+        span.innerHTML = "Check";
         li.appendChild(span);
+
+        let p = document.createElement("p");
+        p.innerHTML = "delete";
+        li.appendChild(p);
+
     }
     inputField.value = "";
 }
@@ -20,5 +25,11 @@ listField.addEventListener("click", function(e){
     if(e.target.tagName === "SPAN"){
         e.target.parentElement.style.textDecoration = "line-through";
     }
-},false);
+
+    if(e.target.tagName === "P"){
+        e.target.parentElement.remove();
+    }
+    
+        
+});
 
