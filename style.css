@@ -37,6 +37,9 @@
     
 }
 
+.savedList{
+    
+}
 .to-do{
     
 }
@@ -48,9 +51,12 @@ ul li{
 ul li span{
     position: absolute;
     text-align: center;
+    font-size: small;
     
     background-color: rgb(172, 172, 172);
     color: white;
+    border-radius: 0.2em;
+    margin-left: 0.5em;
 }
 
 ul li span:hover{

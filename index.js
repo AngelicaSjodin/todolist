@@ -2,6 +2,20 @@
 const inputField = document.getElementById('input');
 const listField = document.getElementById("list");
 
+function save(){
+    var storage = [];
+    var tasks = document.querySelectorAll("li");
+    for(var i=0; i < tasks.length; i++){
+        storage.push(tasks[i].innerHTML);
+    }
+    localStorage.setItem("items",JSON.stringify(storage));
+}
+function load(){
+    const storedItems = JSON.parse(localStorage.getItem("items"));
+    console.log(storedItems)
+    document.getElementById("log").innerHTML = storedItems;
+}
+
 function addList(){
 
     if(inputField.value !== ""){
@@ -13,23 +27,23 @@ function addList(){
         span.innerHTML = "Check";
         li.appendChild(span);
 
-        let p = document.createElement("p");
-        p.innerHTML = "delete";
-        li.appendChild(p);
+        //let p = document.createElement("p");
+        //p.innerHTML = "delete";
+        //li.appendChild(p);
 
     }
     inputField.value = "";
 }
 
 listField.addEventListener("click", function(e){
-    if(e.target.tagName === "SPAN"){
+    
+    if((e.target.tagName === "SPAN")){
         e.target.parentElement.style.textDecoration = "line-through";
     }
 
-    if(e.target.tagName === "P"){
-        e.target.parentElement.remove();
-    }
-    
+    //if(e.target.tagName === "P"){
+    //    e.target.parentElement.remove();
+    //}
         
 });
 
