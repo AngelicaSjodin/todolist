@@ -8,27 +8,25 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+
 <h1 class="title">To Do Lista :D</h1>
 
-<p class="title">
-    <button onclick="save()">save</button>
-    <button onclick="load()">load</button>
-</p>
-<!---->
+
+
 <section class="container">
-    <section class="to-do">
 
-        <section class="flexRow">
-            <input type="text" placeholder="skriv här..." id="input">
-            <button onclick="addList()" class="addButton">+</button>
-        </section>
-
-        <ul id="list"></ul>
-
-        <p class="savedList">Saved to do list:</p>
-        <pre id="log"></pre>
-
+    <section class="rowBox">
+        <input type="text" placeholder="skriv här..." id="input">
+        <button onclick="addList()" class="addButton">+</button>
     </section>
+
+    <ul id="list"></ul>
+
+    <section class="columnBox">
+        <p class="savedList">What you had on your to do list before:</p>
+        <pre id="log"></pre>
+    </section>
+        
 </section>
 
     

@@ -2,6 +2,8 @@
 const inputField = document.getElementById('input');
 const listField = document.getElementById("list");
 
+
+
 function save(){
     var storage = [];
     var tasks = document.querySelectorAll("li");
@@ -19,6 +21,7 @@ function load(){
 function addList(){
 
     if(inputField.value !== ""){
+        
         let li = document.createElement("li");
         li.innerHTML = inputField.value;
         listField.appendChild(li); 
@@ -30,9 +33,11 @@ function addList(){
         //let p = document.createElement("p");
         //p.innerHTML = "delete";
         //li.appendChild(p);
-
+        
     }
+    save()
     inputField.value = "";
+    
 }
 
 listField.addEventListener("click", function(e){
@@ -47,3 +52,4 @@ listField.addEventListener("click", function(e){
         
 });
 
+window.onload = load()
