@@ -26,9 +26,9 @@ function addList(){
         li.innerHTML = inputField.value;
         listField.appendChild(li); 
 
-        let span = document.createElement("span");
-        span.innerHTML = "&#128280;";
-        li.appendChild(span);
+        //let span = document.createElement("span");
+        //span.innerHTML = "&#128280;";
+        //li.appendChild(span);
 
         //let p = document.createElement("p");
         //p.innerHTML = "delete";
@@ -42,8 +42,8 @@ function addList(){
 
 listField.addEventListener("click", function(e){
     
-    if((e.target.tagName === "SPAN")){
-        e.target.parentElement.style.textDecoration = "line-through";
+    if((e.target.tagName === "LI")){
+        e.target.style.textDecoration = "line-through";
     }
 
     //if(e.target.tagName === "P"){
